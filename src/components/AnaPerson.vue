@@ -1,7 +1,7 @@
 <template>
     <div id="AnaPerson">
-        <h1> Usuário não Selecionado </h1>
-        <div>
+        <div id="collectionButtons">
+            #ID Nome
             <li> <button type="button" @click="primaryKey"> 1 Ana</button> </li>
             <li> <button type="button" @click="secondKey"> 2 Carlos</button> </li>
             <li> <button type="button" @click="thirdKey"> 3 Daniel</button> </li>
@@ -37,7 +37,7 @@ export default {
             this.$emit('sameNumber', this.oneValue)
             this.name = 'Carlos',
             this.$emit('sameName', this.name)
-            this.idade = 31
+            this.idade = 22
             this.$emit('sameAge', this.idade)
         },
         thirdKey(){
@@ -45,7 +45,7 @@ export default {
             this.$emit('sameNumber', this.oneValue)
             this.name = 'Daniel',
             this.$emit('sameName', this.name)
-            this.idade = 31
+            this.idade = 40
             this.$emit('sameAge', this.idade)
         },  
         bedroomKey(){
@@ -53,7 +53,7 @@ export default {
             this.$emit('sameNumber', this.oneValue)
             this.name = 'Ema',
             this.$emit('sameName', this.name)
-            this.idade = 31
+            this.idade = 17
             this.$emit('sameAge', this.idade)
         },
         fifthKey(){
@@ -61,7 +61,7 @@ export default {
             this.$emit('sameNumber', this.oneValue)
             this.name = 'Lia',
             this.$emit('sameName', this.name)
-            this.idade = 31
+            this.idade = 28
             this.$emit('sameAge', this.idade)
         }
     }
@@ -71,6 +71,12 @@ export default {
 <style scoped>
 #AnaPerson li:hover {
     background-color: rgba(204, 190, 190, 0.815);
+}
+
+#collectionButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 </style>

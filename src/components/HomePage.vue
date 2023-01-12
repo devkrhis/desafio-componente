@@ -37,7 +37,7 @@ export default {
     },
     data(){
         return {
-            oneValue: 1,
+            oneValue: 0,
             name: 'Ana',
             idade: 31
         }
