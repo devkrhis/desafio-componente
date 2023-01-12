@@ -11,17 +11,17 @@
         :oneValue="oneValue"
         @sameNumber="oneValue = $event"/>
 
-        <div id="controlBox">
-            <informationBlock 
-            :idade="idade" 
-            @sameAge="idade = $event"
 
-            @sameName="name = $event"
-            :name="name"
+        <hr>
+        <informationBlock 
+        :idade="idade" 
+        @sameAge="idade = $event"
 
-            :oneValue="oneValue"
-            @sameNumber="oneValue = $event"/>
-        </div>
+        @sameName="name = $event"
+        :name="name"
+
+        :oneValue="oneValue"
+        @sameNumber="oneValue = $event"/>
     </div>
     
 </template>

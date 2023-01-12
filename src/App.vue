@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <hr>
-    #ID > NOME
-    <hr>
     <HomePage/>
     <hr>
   </div>

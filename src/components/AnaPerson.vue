@@ -79,4 +79,13 @@ export default {
     justify-content: space-evenly;
 }
 
+#collectionButtons button {
+    border: none;
+    background-color: white;
+}
+
+li {
+    list-style-type: none;
+}
+
 </style>
