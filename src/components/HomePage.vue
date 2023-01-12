@@ -1,11 +1,26 @@
 <template>
     <div id="homePage">
-        <AnaPerson/>
+        <hr>
+        <AnaPerson 
+        :idade="idade" 
+        @sameAge="idade = $event"
+
+        @sameName="name = $event"
+        :name="name"
+
+        :oneValue="oneValue"
+        @sameNumber="oneValue = $event"/>
+
         <div id="controlBox">
-            <h1> Teste: {{ idade }}</h1>
-            <informationBlock
-            :idade="idade"
-            @sameAge="idade = $event"/>
+            <informationBlock 
+            :idade="idade" 
+            @sameAge="idade = $event"
+
+            @sameName="name = $event"
+            :name="name"
+
+            :oneValue="oneValue"
+            @sameNumber="oneValue = $event"/>
         </div>
     </div>
     
@@ -22,7 +37,14 @@ export default {
     },
     data(){
         return {
-            idade: 0
+            oneValue: 1,
+            name: 'Ana',
+            idade: 31
+        }
+    },
+    methods: {
+        alterarIdade(){
+            this.idade = 100
         }
     }
     

@@ -12,7 +12,7 @@
 
 <script>
 export default {
-    props: ['oneValue', 'name', 'idade']
+    props: ['oneValue','name','idade']
 }
 </script>
 
