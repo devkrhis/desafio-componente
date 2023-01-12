@@ -77,6 +77,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-bottom: 10%;
 }
 
 #collectionButtons button {
