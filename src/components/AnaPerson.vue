@@ -1,12 +1,32 @@
 <template>
     <div id="AnaPerson">
         <div id="collectionButtons">
-            #ID Nome
-            <li> <button type="button" @click="primaryKey"> 1 Ana</button> </li>
-            <li> <button type="button" @click="secondKey"> 2 Carlos</button> </li>
-            <li> <button type="button" @click="thirdKey"> 3 Daniel</button> </li>
-            <li> <button type="button" @click="bedroomKey"> 4 Ema</button> </li>
-            <li> <button type="button" @click="fifthKey"> 5 Lia</button> </li>
+            <table>
+                <tr>
+                    <td> #ID </td>
+                    <td> Nome </td>
+                </tr>
+                <tr>
+                    <td> <button type="button" @click="primaryKey"> 1 </button> </td>
+                    <td> <button type="button" @click="primaryKey"> Ana</button></td>
+                </tr>
+                <tr>
+                    <td> <button type="button" @click="secondKey"> 2 </button> </td>
+                    <td> <button type="button" @click="secondKey"> Carlos</button></td>
+                </tr>
+                <tr>
+                    <td> <button type="button" @click="thirdKey"> 3 </button> </td>
+                    <td> <button type="button" @click="thirdKey"> Daniel</button></td>
+                </tr>
+                <tr>
+                    <td> <button type="button" @click="bedroomKey"> 4 </button> </td>
+                    <td> <button type="button" @click="bedroomKey"> Ema</button></td>
+                </tr>
+                <tr>
+                    <td> <button type="button" @click="fifthKey"> 5 </button> </td>
+                    <td> <button type="button" @click="fifthKey"> Lia</button></td>
+                </tr>
+            </table>
         </div>
     </div>
     
@@ -69,6 +89,11 @@ export default {
 </script>
 
 <style scoped>
+
+table {
+    border: 10px;
+}
+
 #AnaPerson li:hover {
     background-color: rgba(204, 190, 190, 0.815);
 }
@@ -86,6 +111,7 @@ export default {
 
 li {
     list-style-type: none;
+    margin: 10px
 }
 
 </style>
