@@ -2,15 +2,9 @@
     <div id="homePage">
         <hr>
         <AnaPerson 
-        :idade="idade" 
-        @sameAge="idade = $event"
-
-        @sameName="name = $event"
-        :name="name"
-
-        :oneValue="oneValue"
-        @sameNumber="oneValue = $event"/>
-
+        @sameAll="receber" 
+        />
+        
 
         <hr>
         <informationBlock 
@@ -37,14 +31,23 @@ export default {
     },
     data(){
         return {
-            oneValue: 0,
-            name: 'Ana',
-            idade: 31
+            generalData: {
+                oneValue: 0,
+                name: 'Ana',
+                idade: 31,
+            },
         }
     },
     methods: {
         alterarIdade(){
             this.idade = 100
+        },
+        receber(param){ // ele joga o general inteiro dentro do param
+            console.log(param)
+            param.oneValue
+            param.name
+            param.idade
+            
         }
     }
     

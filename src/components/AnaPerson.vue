@@ -7,16 +7,16 @@
                     <td> Nome </td>
                 </tr>
                 <tr>
-                    <td> <button type="button" @click="primaryKey"> 1 </button> </td>
-                    <td> <button type="button" @click="primaryKey"> Ana</button></td>
+                    <td> <button type="button" @click="primaryKey()"> 1 </button> </td>
+                    <td> <button type="button" @click="primaryKey()"> Ana</button></td>
                 </tr>
                 <tr>
-                    <td> <button type="button" @click="secondKey"> 2 </button> </td>
-                    <td> <button type="button" @click="secondKey"> Carlos</button></td>
+                    <td> <button type="button" @click="secondKey()"> 2 </button> </td>
+                    <td> <button type="button" @click="secondKey()"> Carlos</button></td>
                 </tr>
                 <tr>
-                    <td> <button type="button" @click="thirdKey"> 3 </button> </td>
-                    <td> <button type="button" @click="thirdKey"> Daniel</button></td>
+                    <td> <button type="button" @click="thirdKey()"> 3 </button> </td>
+                    <td> <button type="button" @click="thirdKey()"> Daniel</button></td>
                 </tr>
                 <tr>
                     <td> <button type="button" @click="bedroomKey"> 4 </button> </td>
@@ -38,35 +38,33 @@ export default {
     props: ['idade'],
     data(){
         return {
-            oneValue: 1,
-            name: 'Ana',
-            idade: 31,
+            generalData: {
+                oneValue: 1,
+                name: 'Ana',
+                idade: 31,
+            },
+
+
         }
     },
     methods: {
         primaryKey(){
-            this.oneValue = 1,
-            this.$emit('sameNumber', this.oneValue)
-            this.name = 'Ana',
-            this.$emit('sameName', this.name)
-            this.idade = 31
-            this.$emit('sameAge', this.idade)
+            this.generalData.oneValue = 1,
+            this.generalData.name = 'Ana',
+            this.generalData.idade = 31
+            this.$emit('sameAll', this.generalData) // passa o objeto inteiro.
         },
         secondKey(){
-            this.oneValue = 2,
-            this.$emit('sameNumber', this.oneValue)
-            this.name = 'Carlos',
-            this.$emit('sameName', this.name)
-            this.idade = 22
-            this.$emit('sameAge', this.idade)
+            this.generalData.oneValue = 2,
+            this.generalData.name = 'Carlos',
+            this.generalData.idade = 22
+            this.$emit('sameAll', this.generalData)
         },
         thirdKey(){
-            this.oneValue = 3,
-            this.$emit('sameNumber', this.oneValue)
-            this.name = 'Daniel',
-            this.$emit('sameName', this.name)
-            this.idade = 40
-            this.$emit('sameAge', this.idade)
+            this.generalData.oneValue = 3,
+            this.generalData.name = 'Daniel',
+            this.generalData.idade = 40
+            this.$emit('sameAll', this.generalData)
         },  
         bedroomKey(){
             this.oneValue = 4,
